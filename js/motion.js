@@ -13,6 +13,16 @@
     return el.querySelectorAll(".word");
   }
 
+  function coverReveal() {
+    const cover = document.querySelector(".hero-cover img");
+    if (!cover) return;
+    gsap.fromTo(
+      cover,
+      { scale: 1.15, opacity: 0.4 },
+      { scale: 1, opacity: 1, duration: 2, ease: "power2.out" }
+    );
+  }
+
   function heroReveal() {
     const h1 = document.querySelector(".hero h1");
     if (!h1) return;
@@ -105,6 +115,7 @@
     }
   }
 
+  coverReveal();
   heroReveal();
 
   document.addEventListener("content:ready", (e) => {

@@ -59,10 +59,13 @@ function renderTimeline(posts) {
           </li>`);
       }
     }
+    const thumb = post.image
+      ? `<span class="timeline-thumb"><img src="${post.image}" alt="" loading="lazy"></span>`
+      : "";
     items.push(`
       <li>
         <a class="timeline-link" href="post.html?slug=${encodeURIComponent(post.slug)}">
-          <div class="timeline-row reveal-blur" data-reveal="blur">
+          <div class="timeline-row${post.image ? " has-thumb" : ""} reveal-blur" data-reveal="blur">
             <span class="timeline-date">
               <span class="year">${formatYear(post.date)}</span>
               ${formatDate(post.date)}
@@ -71,6 +74,7 @@ function renderTimeline(posts) {
               <h2 class="timeline-title">${post.title}</h2>
               <p class="timeline-excerpt">${post.excerpt}</p>
             </div>
+            ${thumb}
           </div>
         </a>
       </li>`);
