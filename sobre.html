@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre — Everton Alves</title>
+  <meta name="description" content="Sobre Everton Alves e a origem deste espaço, antes chamado ReborNLtO.">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400..700;1,8..30,400..600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Everton Alves</a>
+      <nav class="site-nav">
+        <a href="index.html">Textos</a>
+        <a href="sobre.html" aria-current="page">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <span class="ficha-label" data-reveal="fade">Ficha</span>
+    <h1 class="page-title" data-reveal="fade">Sobre</h1>
+    <div class="prose" data-reveal="fade">
+      <p>Entre 2010 e 2016, esse espaço se chamava ReborNLtO — um lugar pra pensar em voz alta sobre tempo, incerteza, amor e o resto que não cabe em conversa.</p>
+      <p>Os textos ficaram guardados por dez anos. Agora voltam, com nome novo: Everton Alves. A curiosidade pelas mesmas perguntas continua — só muda quem escreve.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> Everton Alves.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/motion.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
